@@ -1,4 +1,4 @@
-# Pseudo-two-dimensional model for Li-ion cell
+# Open-source DFN P2D model for Li-ion cell in MATLAB/Simulink
 
 
 
@@ -52,7 +52,7 @@ Simulink version
 
 
 
-An equivalent Simulink version of this P2D model is also included here and is implemented by the script "main\_sim\_p2d\_simulink.m". In this Simulink model, original MATLAB code are slightly modified and embedded into User-Defined-Function (UDF) blocks. The Simulink model uses explicit solution method described by Eq(36) through Eq(43) in Ref 2 with current control mode only. The constant voltage simulation is managed by an external feedback cycle controller connected to the P2D model block. The control gain signal "dVexdI" is evaluated by Eq(31) of Ref 3 plus an external resistance term "Rex". The Simulink code runs under fixed-step discrete-time simulation settings. Not just reporducing Figure 5 (a) and (b) of Ref 1, the Simulink model can also plot electrolyte concentration/potential and reaction current vs x-dim location at selected time. 
+An equivalent Simulink version of this P2D model is also included here and is implemented by the script "main\_sim\_p2d\_simulink.m". In this Simulink model, original MATLAB code are slightly modified and embedded into User-Defined-Function (UDF) blocks. The Simulink model uses explicit solution method described by Eq(36) through Eq(43) in Ref 2 with current control mode only. The constant voltage simulation is managed by an external feedback cycle controller connected to the P2D model block. The control gain signal "dVexdI" is evaluated by Eq(31) of Ref 3 plus an external resistance term "Rex". The Simulink code runs under fixed-step discrete-time simulation settings. Not just reporducing Figure 5 (a) and (b) of Ref 1, the Simulink model can also plot electrolyte concentration/potential and reaction current vs x-dim location at selected time.
 
 
 
@@ -62,7 +62,7 @@ The Simulink version of P2D model has the following benefits:
 
 2\) Easy integration into large-scale simulation systems like MIL, HIL, SIL
 
-3\) Convenient building of C/C++ code for micro-controller of BMS execution    
+3\) Convenient building of C/C++ code for micro-controller of BMS execution
 
-4\) Allowing single precision and integer datatype to save memory for hardware implementation   
+4\) Allowing single precision and integer datatype to save memory for hardware implementation
 
