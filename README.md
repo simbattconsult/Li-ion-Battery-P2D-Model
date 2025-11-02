@@ -62,7 +62,7 @@ The Simulink version of P2D model has the following benefits:
 
 2\) Easy integration into large-scale simulation systems like MIL, HIL, SIL
 
-3\) Convenient building of C/C++ code for micro-controller of BMS execution
+3\) Convenient C/C++ code building for micro-controller or BMS execution
 
 4\) Allowing single precision and integer datatype to save memory for hardware implementation
 
