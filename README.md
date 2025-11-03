@@ -43,6 +43,7 @@ MATLAB version
 In the main directory, the script "main\_sim\_p2d\_matlab.m" runs the original MATLAB code that generates the plots in Figure 5 (a) and (b) of Ref 1. The parameters and constant matrix operators are loaded from "\\workspace\\p2d\_workspace\_LIB4.mat".
 
 
+<img width="481" height="655" alt="image" src="https://github.com/user-attachments/assets/eb7310d5-69e8-48f3-9d0d-011f65259338" />
 
 
 
