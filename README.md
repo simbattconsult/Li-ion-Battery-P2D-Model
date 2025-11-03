@@ -66,3 +66,6 @@ The Simulink version of P2D model has the following benefits:
 
 4\) Allowing single precision and integer datatype to save memory for hardware implementation
 
+
+Contact info
+Email : simbattconsult0821@outlook.com
