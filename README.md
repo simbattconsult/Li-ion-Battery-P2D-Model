@@ -44,7 +44,7 @@ In the main directory, the script "main\_sim\_p2d\_matlab.m" runs the original M
 
 
 <img width="481" height="655" alt="image" src="https://github.com/user-attachments/assets/eb7310d5-69e8-48f3-9d0d-011f65259338" />
-(Figure 5 in Ref 2)
+(Figure 5 in Ref 1)
 
 
 
