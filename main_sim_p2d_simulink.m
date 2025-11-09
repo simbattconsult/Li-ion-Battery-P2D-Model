@@ -64,7 +64,7 @@ line(data.t_s/60,data.V_V, 'parent',ax,'linestyle',':','linewidth',4,'color','b'
 xlabel("Time [mim]")
 ylabel("Voltage [V]")
 legend("Model", "Data")
-title("Figure 5(a) of Ref 2")
+title("Figure 5(a) of Ref 1")
 
 figure 
 ax =gca;
@@ -73,7 +73,7 @@ line(data.t_s/60,data.C_rate*Const.I_1C, 'parent',ax,'linestyle',':','linewidth'
 xlabel("Time [mim]")
 ylabel("Current [A]")
 legend("Model", "Data")
-title("Figure 5(b) of Ref 2")
+title("Figure 5(b) of Ref 1")
 
 xn_2nd = linspace(0, mesh.Ln, ord*n1+1);
 xs_2nd = linspace(mesh.Ln, mesh.Ln+mesh.Ls, ord*n2+1);
