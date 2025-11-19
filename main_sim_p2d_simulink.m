@@ -1,4 +1,3 @@
-%% 
 clc
 clear
 close all
@@ -53,14 +52,26 @@ I_sim = timeseries(I_data, t_sim);
 T_sim = timeseries(T_data, t_sim);
 V_max = 4.35;
 
+%% Assign parameters to model
+myDictionaryObj = Simulink.data.dictionary.open('LIB_p2d_dictionary.sldd');
+dDataSectObj = getSection(myDictionaryObj,'Design Data');
+setValue(getEntry(dDataSectObj,'n1'),n1);
+setValue(getEntry(dDataSectObj,'n2'),n2);
+setValue(getEntry(dDataSectObj,'n3'),n3);
+setValue(getEntry(dDataSectObj,'n4'),n4);
+setValue(getEntry(dDataSectObj,'ord'),ord);
+setValue(getEntry(dDataSectObj,'MatC'),MatC);
+setValue(getEntry(dDataSectObj,'Const'),Const);
+setValue(getEntry(dDataSectObj,'dt'),dt);
+
 %% Run simulation
 Result = sim("Li_ion_cell_p2d_with_control_R2021b.slx");
 
 %% Postprocessing and plotting
 figure 
 ax =gca;
-line(Result.tout/60, Result.Vex.data, 'parent',ax,'linewidth',2,'color','r')
-line(data.t_s/60,data.V_V, 'parent',ax,'linestyle',':','linewidth',4,'color','b');
+line(data.t_s/60,data.V_V, 'parent',ax,'linestyle',':','linewidth',5,'color','b');
+line(Result.tout/60, Result.Vex.data, 'parent',ax,'linewidth',3,'color','r')
 xlabel("Time [mim]")
 ylabel("Voltage [V]")
 legend("Model", "Data")
@@ -68,8 +79,8 @@ title("Figure 5(a) of Ref 1")
 
 figure 
 ax =gca;
-line(Result.tout/60, Result.I_control.data, 'parent',ax,'linewidth',2,'color','r')
-line(data.t_s/60,data.C_rate*Const.I_1C, 'parent',ax,'linestyle',':','linewidth',4,'color','b');
+line(data.t_s/60,data.C_rate*Const.I_1C, 'parent',ax,'linestyle',':','linewidth',5,'color','b');
+line(Result.tout/60, Result.I_control.data, 'parent',ax,'linewidth',3,'color','r')
 xlabel("Time [mim]")
 ylabel("Current [A]")
 legend("Model", "Data")
